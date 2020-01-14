@@ -1,0 +1,93 @@
+<!--
+  Objectives
+  1. Using the mobile first approach
+   - Explore what makes for responsiveness and how they work across different platforms and devices
+   - Build our own responsive web page using CSS media queries and viewport tag
+
+  2. Have basic knowledge of CSS flexbox and animations
+
+   How -
+   1. Set view port
+   2. Size content to view port
+   3. Use media queries for specific view port changes
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <title></title>
+
+    <script type="text/javascript">
+      function handle_click(el) {
+        el.classList.toggle("animate");
+        let dropdown_el_list = document.getElementsByClassName("drop-down");
+        console.log(dropdown_el_list, "dropdown_el_list");
+        let dropdown_el = dropdown_el_list[0];
+        dropdown_el.classList.toggle("hidden");
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h3>Breadface</h3>
+      <div class="mobile-menu" onclick="handle_click(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <ul class="main-menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact us</li>
+      </ul>
+    </header>
+    <div class="drop-down hidden">
+      <ul class="dropdown-menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact us</li>
+      </ul>
+    </div>
+    <div id="main">
+      <h3 class="title">
+        Welcome to my food blog. Find interesting recipes you would love to eat.
+      </h3>
+      <div class="heading">
+        Latest recipes
+      </div>
+      <div class="recipe">
+        <div class="recipe_image">
+          <img src="https://via.placeholder.com/250/190" />
+        </div>
+        <div class="recipe_image">
+          <img src="https://via.placeholder.com/250/190" />
+        </div>
+        <div class="recipe_image">
+          <img src="https://via.placeholder.com/250/190" />
+        </div>
+      </div>
+
+      <div class="heading">
+        Favourite Cuisines
+      </div>
+
+      <div class="cuisines">
+        <div class="cuisine_image">
+          <img src="https://via.placeholder.com/115/95" />
+        </div>
+        <div class="cuisine_image">
+          <img src="https://via.placeholder.com/115/95" />
+        </div>
+        <div class="cuisine_image">
+          <img src="https://via.placeholder.com/115/95" />
+        </div>
+        <div class="cuisine_image">
+          <img src="https://via.placeholder.com/115/95" />
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>
